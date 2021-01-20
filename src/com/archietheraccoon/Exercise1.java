@@ -48,7 +48,7 @@ public class Exercise1 {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("InputToMorse: ");
-        String userInput = scanner.nextLine();
+        String userInput = scanner.nextLine().toUpperCase();
 
         StringBuilder sentence = new StringBuilder();
 
