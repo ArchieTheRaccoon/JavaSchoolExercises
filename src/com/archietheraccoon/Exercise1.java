@@ -46,18 +46,12 @@ public class Exercise1 {
         morseAlphabet.put("0", "- - - - -");
         morseAlphabet.put(" ", "  ");
 
-        Scanner scanner = new Scanner(System.in);
         System.out.print("InputToMorse: ");
-        String userInput = scanner.nextLine().toUpperCase();
 
         StringBuilder sentence = new StringBuilder();
+        for (char c : new Scanner(System.in).nextLine().toUpperCase().toCharArray())
+            sentence.append(c).append(" ");
 
-        for (int i = 0; i < userInput.length(); i++) {
-            sentence.append(" ");
-            sentence.append(morseAlphabet.get(String.valueOf(userInput.charAt(i))));
-            sentence.append(" ");
-        }
-
-        System.out.println(sentence);
+        System.out.println(sentence.toString().trim());
     }
 }
